@@ -1,0 +1,16 @@
+<div>
+  <script src="../node_modules/cesium/Source/cesium.js"></script>
+    <div>Cesium Viewer</div>
+    <label>text</label>
+    <input type="text" [value]="entity.label.text._value" (input)="entity.label.text = $event.target.value" autofocus />
+    <label>scale</label>
+    <input type="text" [value]="entity.label.scale?._value" (input)="scale($event.target.value)" />
+    <br />
+    <label>x</label>
+    <input type="text" [value]="x" (input)="x = $event.target.value" />
+    <label>y</label>
+    <input type="text" [value]="y" (input)="y = $event.target.value" />
+    <label>z</label>
+    <input type="text" [value]="z" (input)="z = $event.target.value" />
+    <div id="cesiumContainer" class="viewerContainer" #cesiumViewer></div>
+</div>
